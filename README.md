@@ -182,13 +182,43 @@ Summary: A compassionate strategy turned good intentions into meaningful action.
 
 ## Extracted Mitigation Heuristics
 
-- Use **prioritization** when constraints conflict
-- Use **decomposition** to improve semantic planning
-- Use **self-check loops** when structure matters
-- Scaffold **reasoning**, not tone, to achieve rigor
+The following heuristics are extracted from empirical observations in this case study.  
+They are not universal laws, but **reusable control strategies** that can be applied when similar failure patterns appear.
+
+### 1. Use explicit prioritization when constraints conflict
+When a model selectively ignores some constraints while over-obeying others, adding an explicit priority rule helps determine **which constraint is sacrificed**.
+
+- Effective for resolving tone vs structure conflicts
+- Does not increase total compliance capacity
+- Always trades one dimension for another
 
 ---
 
-## Final Takeaway
+### 2. Use structural decomposition to improve semantic planning
+Breaking the task into ordered internal steps improves coherence and flow.
 
-> Academic rigor is a structural property, not a stylistic one.
+- Effective for disjointed or rushed outputs
+- Improves semantic organization
+- Does not guarantee analytical rigor
+- Can weaken low-level mechanical compliance if unguarded
+
+---
+
+### 3. Always add self-check + repair when structure matters
+Post-generation verification is the most reliable way to enforce mechanical constraints.
+
+- Strongly enforces formatting, counts, and schema
+- Preserves tone and fluency
+- Does not improve reasoning depth or rigor
+
+---
+
+### 4. Scaffold reasoning explicitly to achieve rigor
+High-level qualities like “academic rigor” do not emerge from tone or decomposition alone.
+
+To achieve rigor, prompts must explicitly require:
+- evaluative criteria
+- comparisons or counterfactuals
+- structured synthesis
+
+Rigor is a **structural property**, not a stylistic one.
